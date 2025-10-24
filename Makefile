@@ -10,7 +10,8 @@ TARGET = iphone:clang:16.5:13.0
 PACKAGE_VERSION = 2.3.1
 
 include $(THEOS)/makefiles/common.mk
-
+ADDITIONAL_CFLAGS += -Wno-error=vla-cxx-extension
+ADDITIONAL_CXXFLAGS += -Wno-error=vla-cxx-extension
 TWEAK_NAME = YTMusicUltimate
 
 $(TWEAK_NAME)_FILES = $(shell find Source -name '*.xm' -o -name '*.x' -o -name '*.m')
